@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.maven.dubbo</groupId>
+  <artifactId>dubbo_zookeeper</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>dubbo-service</module>
+    <module>dubbo-provider1</module>
+    <module>dubbo-provider2</module>
+    <module>dubbo-consumer1</module>
+    <module>dubbo-consumer2</module>
+  </modules>
+  <properties>
+  	<project.version>0.0.1-SNAPSHOT</project.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>dubbo</artifactId>
+		<version>2.5.3</version>
+		<exclusions>
+			<exclusion>
+				<artifactId>spring</artifactId>
+				<groupId>org.springframework</groupId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.zookeeper</groupId>
+		<artifactId>zookeeper</artifactId>
+		<version>3.3.3</version>
+	</dependency>
+	<!-- zookeeper client依赖，用于向zookeeper注册服务 -->
+	<dependency>
+		<groupId>com.github.sgroschupf</groupId>
+		<artifactId>zkclient</artifactId>
+		<version>0.1</version>
+	</dependency>
+	<!-- 日志相关 -->
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.6</version>
+	</dependency>
+
+	<!--Spring框架核心-->
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>4.1.7.RELEASE</version>
+	</dependency>
+	<!-- spring-tx 声明事务 @Transational -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>4.1.7.RELEASE</version>
+	</dependency>
+	<!-- Spring MVC --> 
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>4.1.7.RELEASE</version>
+	</dependency>
+	<!-- jstl jar -->
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+	</dependency>
+	<dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+		<version>1.1.2</version>
+	</dependency>
+	<!-- jackson jar -->
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-jaxrs</artifactId>
+		<version>1.9.11</version>
+	</dependency>
+
+	<!-- web jar -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.0.1</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.1.2</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet.jsp</groupId>
+		<artifactId>javax.servlet.jsp-api</artifactId>
+		<version>2.3.1</version>
+		<scope>provided</scope>
+	</dependency>
+  </dependencies>
+</project>
